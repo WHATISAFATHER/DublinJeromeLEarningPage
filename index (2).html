@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Dublin Jerome Study Group</title>
+    <style>
+        body {
+            background-color: #154734;
+            color: #B9975B;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .img-container {
+            margin: 20px 0;
+        }
+        .img-container img {
+            width: 40%; 
+            border-radius: 10px;
+        }
+        .links a {
+            display: block;
+            background-color: #B9975B;
+            color: #154734;
+            padding: 10px;
+            margin: 10px auto;
+            width: 50%;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .links a:hover {
+            background-color: #D4AF65;
+        }
+        .ForkCode {
+            font-size: 12px;
+            color: red;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Dublin Jerome Study Group</h1>
+        <p><strong>This website should strictly be used for educational purposes only. Wink wink, Bears.</strong></p>
+        <br>
+        <p class="ForkCode">The code in these forks is the property of its respective creators. I do not claim ownership or authorship.</p>
+        
+        <div class="img-container">
+            <img src="homepagelogo.jpeg" alt="Dublin Jerome High School">
+        </div>
+        
+        <div class="links">
+            <a href="RetroBowl/retrobowl.html">Retro Bowl</a>
+            <a href="BlockBlast/blockblast.html">BlockBlast</a>
+            <a href="https://167.71.43.43/">CroxyProxy</a>
+            <a href="https://cbgamesdev.github.io/chilibowlflash/">Chilibowlflash</a>
+            <a href="EducationalFlashcards-main/chatroom.html">Chatroom *Popular*</a>
+        </div>
+    </div>
+    
+    <!-- Add To Homescreen Request -->
+    <div id="webpage">
+        <h1>PLEASE ADD TO HOMESCREEN</h1>
+        <img src="AddToHomescreen.jpeg" width="25%">
+    </div>
+    
+    <!-- Check if added to homescreen -->
+    <script>
+        var webpage = document.getElementById("webpage");
+        if (window.navigator.standalone || !(/iPad|iPhone|iPod|Mac/.test(navigator.userAgent))) {
+            webpage.style.display = "none";
+        } else {
+            webpage.style.display = "block";
+        }
+    </script>
+</body>
+</html>
