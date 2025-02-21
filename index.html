@@ -80,7 +80,7 @@
         </div>
     </div>
     
-    <!-- Add To Homescreen Request -->
+   
     <div id="webpage">
         <h1>PLEASE ADD TO HOMESCREEN</h1>
         <img src="addtohomescreen.JPG" width="25%">
@@ -92,11 +92,11 @@
     var webpage = document.getElementById("webpage");
     var standalone = document.getElementById("standalone");
     if (window.navigator.standalone || !(/iPad|iPhone|iPod|Mac/.test(navigator.userAgent))) {
-        standalone.style.display = "block";  // Show main content
-        webpage.style.display = "none";  // Hide "PLEASE ADD TO HOMESCREEN"
+        standalone.style.display = "block";  
+        webpage.style.display = "none";  
     } else {
-        standalone.style.display = "none";  // Hide main content
-        webpage.style.display = "block";  // Show "PLEASE ADD TO HOMESCREEN"
+        standalone.style.display = "none"; 
+        webpage.style.display = "block";  
     }
 });
 
