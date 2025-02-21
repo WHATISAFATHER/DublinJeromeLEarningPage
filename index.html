@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Apple Webkit Stuff-->
+    <!-- Apple Webkit Stuff -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-icon" sizes="152x152" href="googledrivelogo.webp">
     <link rel="icon" type="image/png" href="googledrivelogo.webp">
@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desmos</title>
+    
     <style>
         body {
             background-color: #154734;
@@ -20,6 +21,11 @@
         }
         h1 {
             font-size: 2.5em;
+        }
+        .owner {
+            font-size: 12px; /* Smaller font size */
+            color: black; /* Black text color */
+            margin-top: -10px; /* Adjust spacing */
         }
         .container {
             width: 80%;
@@ -51,22 +57,26 @@
         .ForkCode {
             font-size: 12px;
             color: red;
+            margin: 15px 0; /* Adds spacing between paragraphs */
+            padding: 5px;
+            border-top: 1px solid red; /* Adds a subtle separator */
+            display: inline-block; /* Keeps width tight around content */
         }
         #standalone {
-        display: none;
+            display: none;
         }
         #webpage {
-        display: block;
-
+            display: block;
         }
     </style>
 </head>
 <body>
     <div id="standalone">
         <h1>Welcome to the Dublin Jerome Study Group</h1>
+        <p class="owner">This site was made and owned by Emmanuel Middleton</p>
         <p><strong>This website should strictly be used for educational purposes only.</strong></p>
+        
         <p class="ForkCode">18+ Only *Not During School* NO INAPPROPRIATE OR OFFENSIVE CONTENT</p>
-        <br>
         <p class="ForkCode">The code in these forks is the property of its respective creators. I do not claim ownership or authorship.</p>
         
         <div class="img-container">
@@ -83,7 +93,6 @@
         </div>
     </div>
     
-   
     <div id="webpage">
         <h1>PLEASE ADD TO HOMESCREEN</h1>
         <img src="addtohomescreen.JPG" width="25%">
@@ -91,18 +100,17 @@
     
     <!-- Check if added to homescreen -->
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    var webpage = document.getElementById("webpage");
-    var standalone = document.getElementById("standalone");
-    if (window.navigator.standalone || !(/iPad|iPhone|iPod|Mac/.test(navigator.userAgent))) {
-        standalone.style.display = "block";  
-        webpage.style.display = "none";  
-    } else {
-        standalone.style.display = "none"; 
-        webpage.style.display = "block";  
-    }
-});
-
+        document.addEventListener("DOMContentLoaded", function () {
+            var webpage = document.getElementById("webpage");
+            var standalone = document.getElementById("standalone");
+            if (window.navigator.standalone || !(/iPad|iPhone|iPod|Mac/.test(navigator.userAgent))) {
+                standalone.style.display = "block";  
+                webpage.style.display = "none";  
+            } else {
+                standalone.style.display = "none"; 
+                webpage.style.display = "block";  
+            }
+        });
     </script>
 </body>
 </html>
