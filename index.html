@@ -54,7 +54,7 @@
         display: none;
         }
         #webpage {
-        display: block !important;
+        display: block;
 
         }
     </style>
@@ -88,14 +88,17 @@
     
     <!-- Check if added to homescreen -->
     <script>
-        var webpage = document.getElementById("webpage");
-        if (window.navigator.standalone || !(/iPad|iPhone|iPod|Mac/.test(navigator.userAgent))) {
-            webpage.style.display = "none";
-        } else {
-            webpage.style.display = "block";
-        }
-        document.getElementById("standalone").style.display = "none"; 
-        document.getElementById("webpage").style.display = "block"; 
+    document.addEventListener("DOMContentLoaded", function () {
+    var webpage = document.getElementById("webpage");
+    var standalone = document.getElementById("standalone");
+    if (window.navigator.standalone || !(/iPad|iPhone|iPod|Mac/.test(navigator.userAgent))) {
+        standalone.style.display = "block";  // Show main content
+        webpage.style.display = "none";  // Hide "PLEASE ADD TO HOMESCREEN"
+    } else {
+        standalone.style.display = "none";  // Hide main content
+        webpage.style.display = "block";  // Show "PLEASE ADD TO HOMESCREEN"
+    }
+});
 
     </script>
 </body>
